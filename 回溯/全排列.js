@@ -24,20 +24,16 @@
         }
         for(let i = 0; i< len; i++) {
             if(!used[i]) {
-            console.log(path,used,i, '排列前');
                 path.push(nums[i])
                 used[i] = true
-            console.log(path,used,i, '排列后');
                 fn(len,used)
-            console.log(path,used,i, '回溯前');
                 path.pop()
                 used[i] = false
-            console.log(path,used,i, '回溯后');
             }
         }
     }
     return res
 };
 
-permute([1,2,3])
+console.log(permute([1,2,3])); 
 
